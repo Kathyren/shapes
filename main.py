@@ -29,6 +29,12 @@ class Circle:
     def __call__(self):
         return "I am a happy circle c:"
 
+    def __str__(self):
+        return f"Circle radius {self._radius}, fill {self._fill}, stroke {self._stroke}"
+
+    def __repr__(self):
+        return f"Circle({self._radius}, {self._fill}, {self._stroke})"
+
 def main():
     circle = Circle(5.0, fill='orange', stroke='red')
     print(f"Area = {circle.calculate_area()}")
@@ -37,6 +43,9 @@ def main():
     print(f"circunference is {len(circle)}")
     print(circle._radius)
     print(circle())
+
+    print(repr(circle))
+    print (circle)
     return 0
 
 
